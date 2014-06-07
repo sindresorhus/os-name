@@ -1,0 +1,46 @@
+{
+  "name": "os-name",
+  "version": "0.0.0",
+  "description": "Get the name of the current operating system. Example: OS X Mavericks",
+  "license": "MIT",
+  "repository": "sindresorhus/os-name",
+  "bin": {
+    "os-name": "cli.js"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "os",
+    "operating",
+    "system",
+    "platform",
+    "name",
+    "title",
+    "release",
+    "version",
+    "osx",
+    "windows",
+    "linux"
+  ],
+  "dependencies": {
+    "minimist": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
