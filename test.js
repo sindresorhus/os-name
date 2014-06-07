@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var osName = require('.');
+var osName = require('./');
 
 it('should return the name a OS', function () {
 	assert(osName().length > 0);
