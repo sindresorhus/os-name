@@ -38,7 +38,8 @@
     "linux"
   ],
   "dependencies": {
-    "minimist": "^0.1.0"
+    "minimist": "^0.1.0",
+    "osx-release": "^0.1.0"
   },
   "devDependencies": {
     "mocha": "*"

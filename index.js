@@ -1,19 +1,6 @@
 'use strict';
 var os = require('os');
 
-var darwin = {
-	'14': 'Yosemite',
-	'13': 'Mavericks',
-	'12': 'Mountain Lion',
-	'11': 'Lion',
-	'10': 'Snow Leopard',
-	'9': 'Leopard',
-	'8': 'Tiger',
-	'7': 'Panther',
-	'6': 'Jaguar',
-	'5': 'Puma'
-};
-
 var win32 = {
 	'6.3': '8.1',
 	'6.2': '8',
@@ -37,7 +24,7 @@ module.exports = function (platform, release) {
 	var id;
 
 	if (platform === 'darwin') {
-		id = darwin[release.split('.')[0]];
+		id = require('osx-release')(release).name;
 		return 'OS X' + (id ? ' ' + id : '');
 	}
 
