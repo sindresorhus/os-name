@@ -48,6 +48,8 @@ By default the name of the current operating system is returned.
 
 You can optionally supply a custom [`os.platform()`](http://nodejs.org/api/os.html#os_os_platform) and [`os.release()`](http://nodejs.org/api/os.html#os_os_release).
 
+Check out [getos](https://github.com/wblankenship/getos) if you need the Linux distribution name.
+
 
 ## CLI
 
