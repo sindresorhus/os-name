@@ -66,6 +66,11 @@ Example
 ```
 
 
+## Contributing
+
+Production systems depend on this package for logging / tracking. Please be careful when introducing new output, and adhere to existing output format (whitespace, capitalization, etc.).
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
