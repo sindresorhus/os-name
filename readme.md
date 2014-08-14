@@ -60,9 +60,9 @@ $ npm install --global os-name
 ```sh
 $ os-name --help
 
-Example
-  $ os-name
-  OS X Mavericks
+  Example
+    os-name
+    OS X Mavericks
 ```
 
 

@@ -6,11 +6,12 @@ var osName = require('./');
 
 function help() {
 	console.log([
-		pkg.description,
 		'',
-		'Example',
-		'  $ os-name',
-		'  OS X Mavericks'
+		'  ' + pkg.description,
+		'',
+		'  Example',
+		'    os-name',
+		'    OS X Mavericks'
 	].join('\n'));
 }
 
