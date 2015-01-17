@@ -1,18 +1,7 @@
 'use strict';
 var os = require('os');
-
-var win32 = {
-	'6.4': '10',
-	'6.3': '8.1',
-	'6.2': '8',
-	'6.1': '7',
-	'6.0': 'Vista',
-	'5.1': 'XP',
-	'5.0': '2000',
-	'4.9': 'ME',
-	'4.1': '98',
-	'4.0': '95'
-};
+var osxRelease = require('osx-release');
+var winRelease = require('win-release');
 
 module.exports = function (platform, release) {
 	if (!platform && release) {
@@ -25,7 +14,7 @@ module.exports = function (platform, release) {
 	var id;
 
 	if (platform === 'darwin') {
-		id = require('osx-release')(release).name;
+		id = osxRelease(release).name;
 		return 'OS X' + (id ? ' ' + id : '');
 	}
 
@@ -35,7 +24,7 @@ module.exports = function (platform, release) {
 	}
 
 	if (platform === 'win32') {
-		id = win32[release.slice(0, 3)];
+		id = winRelease(release);
 		return 'Windows' + (id ? ' ' + id : '');
 	}
 
