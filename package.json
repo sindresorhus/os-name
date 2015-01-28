@@ -7,7 +7,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "bin": {
     "os-name": "cli.js"
@@ -38,7 +38,6 @@
     "linux"
   ],
   "dependencies": {
-    "minimist": "^1.1.0",
     "osx-release": "^1.0.0",
     "win-release": "^1.0.0"
   },

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-var argv = require('minimist')(process.argv.slice(2));
 var pkg = require('./package.json');
 var osName = require('./');
+var argv = process.argv;
 
 function help() {
 	console.log([
@@ -15,12 +15,12 @@ function help() {
 	].join('\n'));
 }
 
-if (argv.help) {
+if (argv.indexOf('--help') !== -1) {
 	help();
 	return;
 }
 
-if (argv.version) {
+if (argv.indexOf('--version') !== -1) {
 	console.log(pkg.version);
 	return;
 }
