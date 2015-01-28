@@ -1,6 +1,6 @@
 {
   "name": "os-name",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the name of the current operating system. Example: OS X Mavericks",
   "license": "MIT",
   "repository": "sindresorhus/os-name",
