@@ -8,7 +8,7 @@ meow({
 		'Example',
 		'  os-name',
 		'  OS X Mavericks'
-	].join('\n')
+	]
 });
 
 console.log(osName());
