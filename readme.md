@@ -7,7 +7,7 @@ Useful for analytics and debugging.
 
 ## Install
 
-```sh
+```
 $ npm install --save os-name
 ```
 
@@ -15,28 +15,28 @@ $ npm install --save os-name
 ## Usage
 
 ```js
-var os = require('os');
-var osName = require('os-name');
+const os = require('os');
+const osName = require('os-name');
 
 // on an OS X Mavericks system
 
 osName();
-//=> OS X Mavericks
+//=> 'OS X Mavericks'
 
 osName(os.platform(), os.release());
-//=> OS X Mavericks
+//=> 'OS X Mavericks'
 
 osName(os.platform());
-//=> OS X
+//=> 'OS X'
 
 osName('linux', '3.13.0-24-generic');
-//=> Linux 3.13
+//=> 'Linux 3.13'
 
 osName('win32', '6.3.9600');
-//=> Windows 8.1
+//=> 'Windows 8.1'
 
 osName('win32');
-// Windows
+// 'Windows'
 ```
 
 
@@ -53,15 +53,15 @@ Check out [getos](https://github.com/wblankenship/getos) if you need the Linux d
 
 ## CLI
 
-```sh
+```
 $ npm install --global os-name
 ```
 
-```sh
+```
 $ os-name --help
 
   Example
-    os-name
+    $ os-name
     OS X Mavericks
 ```
 
