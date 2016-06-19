@@ -1,7 +1,7 @@
 {
   "name": "os-name",
   "version": "1.0.3",
-  "description": "Get the name of the current operating system. Example: OS X Mavericks",
+  "description": "Get the name of the current operating system. Example: macOS Sierra",
   "license": "MIT",
   "repository": "sindresorhus/os-name",
   "author": {
@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -23,7 +23,6 @@
   "keywords": [
     "cli-app",
     "cli",
-    "bin",
     "os",
     "operating",
     "system",
@@ -32,16 +31,18 @@
     "title",
     "release",
     "version",
+    "macos",
     "osx",
     "windows",
     "linux"
   ],
   "dependencies": {
-    "meow": "^3.3.0",
+    "meow": "^3.7.0",
     "osx-release": "^1.0.0",
     "win-release": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }

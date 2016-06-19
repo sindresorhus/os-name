@@ -3,12 +3,10 @@
 var meow = require('meow');
 var osName = require('./');
 
-meow({
-	help: [
-		'Example',
-		'  os-name',
-		'  OS X Mavericks'
-	]
-});
+meow([
+	'Example',
+	'  $ os-name',
+	'  macOS Sierra'
+]);
 
 console.log(osName());
