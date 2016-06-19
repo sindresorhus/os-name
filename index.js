@@ -1,6 +1,6 @@
 'use strict';
 var os = require('os');
-var osxRelease = require('osx-release');
+var macosRelease = require('macos-release');
 var winRelease = require('win-release');
 
 module.exports = function (platform, release) {
@@ -14,8 +14,9 @@ module.exports = function (platform, release) {
 	var id;
 
 	if (platform === 'darwin') {
-		id = osxRelease(release).name;
-		return 'OS X' + (id ? ' ' + id : '');
+		var prefix = Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X';
+		id = macosRelease(release).name;
+		return prefix + (id ? ' ' + id : '');
 	}
 
 	if (platform === 'linux') {

@@ -1,6 +1,7 @@
 # os-name [![Build Status](https://travis-ci.org/sindresorhus/os-name.svg?branch=master)](https://travis-ci.org/sindresorhus/os-name)
 
-> Get the name of the current operating system. Example: `OS X Mavericks`
+> Get the name of the current operating system<br>
+> Example: `macOS Sierra`
 
 Useful for analytics and debugging.
 
@@ -18,25 +19,22 @@ $ npm install --save os-name
 const os = require('os');
 const osName = require('os-name');
 
-// on an OS X Mavericks system
+// on a macOS Sierra system
 
 osName();
-//=> 'OS X Mavericks'
+//=> 'macOS Sierra'
 
 osName(os.platform(), os.release());
-//=> 'OS X Mavericks'
+//=> 'macOS Sierra'
 
-osName(os.platform());
-//=> 'OS X'
+osName('darwin', '14.0.0');
+//=> 'OS X Yosemite'
 
 osName('linux', '3.13.0-24-generic');
 //=> 'Linux 3.13'
 
 osName('win32', '6.3.9600');
 //=> 'Windows 8.1'
-
-osName('win32');
-// 'Windows'
 ```
 
 
