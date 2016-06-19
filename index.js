@@ -5,7 +5,7 @@ var winRelease = require('win-release');
 
 module.exports = function (platform, release) {
 	if (!platform && release) {
-		throw new Error('You can\'t specify a `release` without specfying `platform`');
+		throw new Error('You can\'t specify a `release` without specifying `platform`');
 	}
 
 	platform = platform || os.platform();
