@@ -49,26 +49,16 @@ You can optionally supply a custom [`os.platform()`](http://nodejs.org/api/os.ht
 Check out [getos](https://github.com/wblankenship/getos) if you need the Linux distribution name.
 
 
-## CLI
-
-```
-$ npm install --global os-name
-```
-
-```
-$ os-name --help
-
-  Example
-    $ os-name
-    OS X Mavericks
-```
-
-
 ## Contributing
 
 Production systems depend on this package for logging / tracking. Please be careful when introducing new output, and adhere to existing output format (whitespace, capitalization, etc.).
 
 
+## Related
+
+- [os-name-cli](https://github.com/sindresorhus/os-name-cli) - CLI for this module
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
