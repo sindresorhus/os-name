@@ -1,7 +1,7 @@
 'use strict';
-var os = require('os');
-var macosRelease = require('macos-release');
-var winRelease = require('win-release');
+const os = require('os');
+const macosRelease = require('macos-release');
+const winRelease = require('windows-release');
 
 module.exports = function (platform, release) {
 	if (!platform && release) {
@@ -9,23 +9,24 @@ module.exports = function (platform, release) {
 	}
 
 	platform = platform || os.platform();
-	release = release || os.release();
 
-	var id;
+	let id;
 
 	if (platform === 'darwin') {
-		var prefix = Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X';
+		release = release || os.release();
+		const prefix = Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X';
 		id = macosRelease(release).name;
 		return prefix + (id ? ' ' + id : '');
 	}
 
 	if (platform === 'linux') {
+		release = release || os.release();
 		id = release.replace(/^(\d+\.\d+).*/, '$1');
 		return 'Linux' + (id ? ' ' + id : '');
 	}
 
 	if (platform === 'win32') {
-		id = winRelease(release);
+		id = release ? winRelease(release) : '';
 		return 'Windows' + (id ? ' ' + id : '');
 	}
 
