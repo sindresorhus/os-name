@@ -13,19 +13,26 @@ module.exports = function (platform, release) {
 	let id;
 
 	if (platform === 'darwin') {
-		release = release || os.release();
-		const prefix = Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X';
-		id = macosRelease(release).name;
+		if (!release && os.platform() === 'darwin') {
+			release = os.release();
+		}
+		const prefix = release ? (Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X') : 'macOS';
+		id = release ? macosRelease(release).name : '';
 		return prefix + (id ? ' ' + id : '');
 	}
 
 	if (platform === 'linux') {
-		release = release || os.release();
-		id = release.replace(/^(\d+\.\d+).*/, '$1');
+		if (!release && os.platform() === 'linux') {
+			release = os.release();
+		}
+		id = release ? release.replace(/^(\d+\.\d+).*/, '$1') : '';
 		return 'Linux' + (id ? ' ' + id : '');
 	}
 
 	if (platform === 'win32') {
+		if (!release && os.platform() === 'win32') {
+			release = os.release();
+		}
 		id = release ? winRelease(release) : '';
 		return 'Windows' + (id ? ' ' + id : '');
 	}

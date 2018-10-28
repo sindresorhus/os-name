@@ -1,3 +1,4 @@
+import os from 'os';
 import test from 'ava';
 import m from '.';
 
@@ -13,5 +14,16 @@ test(t => {
 	t.is(m('win32', '4.90'), 'Windows ME');
 	t.is(m('win32', '6.2'), 'Windows 8');
 	t.is(m('win32', '10.0'), 'Windows 10');
+
+	os.platform = () => 'darwin';
 	t.is(m('win32'), 'Windows');
+	t.is(m('linux'), 'Linux');
+
+	os.platform = () => 'linux';
+	t.is(m('darwin'), 'macOS');
+	t.is(m('win32'), 'Windows');
+
+	os.platform = () => 'win32';
+	t.is(m('darwin'), 'macOS');
+	t.is(m('linux'), 'Linux');
 });
