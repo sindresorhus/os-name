@@ -9,7 +9,7 @@ Useful for analytics and debugging.
 ## Install
 
 ```
-$ npm install --save os-name
+$ npm install os-name
 ```
 
 
@@ -19,7 +19,7 @@ $ npm install --save os-name
 const os = require('os');
 const osName = require('os-name');
 
-// on a macOS Sierra system
+// On a macOS Sierra system
 
 osName();
 //=> 'macOS Sierra'
@@ -42,11 +42,11 @@ osName('win32', '6.3.9600');
 
 ### osName([platform, release])
 
-By default the name of the current operating system is returned.
+By default, the name of the current operating system is returned.
 
-You can optionally supply a custom [`os.platform()`](http://nodejs.org/api/os.html#os_os_platform) and [`os.release()`](http://nodejs.org/api/os.html#os_os_release).
+You can optionally supply a custom [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) and [`os.release()`](https://nodejs.org/api/os.html#os_os_release).
 
-Check out [getos](https://github.com/wblankenship/getos) if you need the Linux distribution name.
+Check out [`getos`](https://github.com/wblankenship/getos) if you need the Linux distribution name.
 
 
 ## Contributing

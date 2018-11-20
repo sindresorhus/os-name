@@ -3,7 +3,7 @@ const os = require('os');
 const macosRelease = require('macos-release');
 const winRelease = require('windows-release');
 
-module.exports = function (platform, release) {
+module.exports = (platform, release) => {
 	if (!platform && release) {
 		throw new Error('You can\'t specify a `release` without specifying `platform`');
 	}
@@ -16,6 +16,7 @@ module.exports = function (platform, release) {
 		if (!release && os.platform() === 'darwin') {
 			release = os.release();
 		}
+
 		const prefix = release ? (Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X') : 'macOS';
 		id = release ? macosRelease(release).name : '';
 		return prefix + (id ? ' ' + id : '');
@@ -25,6 +26,7 @@ module.exports = function (platform, release) {
 		if (!release && os.platform() === 'linux') {
 			release = os.release();
 		}
+
 		id = release ? release.replace(/^(\d+\.\d+).*/, '$1') : '';
 		return 'Linux' + (id ? ' ' + id : '');
 	}
@@ -33,6 +35,7 @@ module.exports = function (platform, release) {
 		if (!release && os.platform() === 'win32') {
 			release = os.release();
 		}
+
 		id = release ? winRelease(release) : '';
 		return 'Windows' + (id ? ' ' + id : '');
 	}
