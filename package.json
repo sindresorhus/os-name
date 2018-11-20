@@ -33,8 +33,8 @@
     "linux"
   ],
   "dependencies": {
-    "macos-release": "^1.0.0",
-    "win-release": "^1.0.0"
+    "macos-release": "^2.0.0",
+    "windows-release": "^3.1.0"
   },
   "devDependencies": {
     "ava": "*",
