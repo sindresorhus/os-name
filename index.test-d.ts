@@ -1,6 +1,6 @@
-import {expectType} from 'tsd-check';
+import {expectType} from 'tsd';
 import * as os from 'os';
-import osName from '.';
+import osName = require('.');
 
 expectType<string>(osName());
 expectType<string>(osName(os.platform(), os.release()));

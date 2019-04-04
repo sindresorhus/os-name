@@ -44,4 +44,3 @@ const osName = (platform, release) => {
 };
 
 module.exports = osName;
-module.exports.default = osName;
