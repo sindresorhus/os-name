@@ -3,7 +3,7 @@ const os = require('os');
 const macosRelease = require('macos-release');
 const winRelease = require('windows-release');
 
-module.exports = (platform, release) => {
+const osName = (platform, release) => {
 	if (!platform && release) {
 		throw new Error('You can\'t specify a `release` without specifying `platform`');
 	}
@@ -42,3 +42,5 @@ module.exports = (platform, release) => {
 
 	return platform;
 };
+
+module.exports = osName;
