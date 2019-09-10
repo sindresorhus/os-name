@@ -40,7 +40,7 @@ osName('win32', '6.3.9600');
 
 ## API
 
-### osName([platform, release])
+### osName(platform?, release?)
 
 By default, the name of the current operating system is returned.
 
@@ -59,6 +59,14 @@ Production systems depend on this package for logging / tracking. Please be care
 - [os-name-cli](https://github.com/sindresorhus/os-name-cli) - CLI for this module
 
 
-## License
+---
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-os-name?utm_source=npm-os-name&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
