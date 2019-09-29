@@ -33,7 +33,7 @@
 		"linux"
 	],
 	"dependencies": {
-		"macos-release": "^2.2.0",
+		"macos-release": "^2.3.0",
 		"windows-release": "^3.1.0"
 	},
 	"devDependencies": {
