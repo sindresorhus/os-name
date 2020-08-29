@@ -4,13 +4,14 @@
 	"description": "Get the name of the current operating system. Example: macOS Sierra",
 	"license": "MIT",
 	"repository": "sindresorhus/os-name",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -34,12 +35,12 @@
 	],
 	"dependencies": {
 		"macos-release": "^2.2.0",
-		"windows-release": "^3.1.0"
+		"windows-release": "^4.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^11.13.0",
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"@types/node": "^14.6.2",
+		"ava": "^2.4.0",
+		"tsd": "^0.13.1",
+		"xo": "^0.33.0"
 	}
 }

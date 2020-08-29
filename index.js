@@ -18,7 +18,11 @@ const osName = (platform, release) => {
 		}
 
 		const prefix = release ? (Number(release.split('.')[0]) > 15 ? 'macOS' : 'OS X') : 'macOS';
-		id = release ? macosRelease(release).name : '';
+
+		try {
+			id = release ? macosRelease(release).name : '';
+		} catch {}
+
 		return prefix + (id ? ' ' + id : '');
 	}
 

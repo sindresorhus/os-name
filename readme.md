@@ -1,17 +1,15 @@
-# os-name [![Build Status](https://travis-ci.org/sindresorhus/os-name.svg?branch=master)](https://travis-ci.org/sindresorhus/os-name)
+# os-name [![Build Status](https://travis-ci.com/sindresorhus/os-name.svg?branch=master)](https://travis-ci.com/github/sindresorhus/os-name)
 
-> Get the name of the current operating system<br>
+> Get the name of the current operating system\
 > Example: `macOS Sierra`
 
 Useful for analytics and debugging.
-
 
 ## Install
 
 ```
 $ npm install os-name
 ```
-
 
 ## Usage
 
@@ -37,7 +35,6 @@ osName('win32', '6.3.9600');
 //=> 'Windows 8.1'
 ```
 
-
 ## API
 
 ### osName(platform?, release?)
@@ -48,16 +45,13 @@ You can optionally supply a custom [`os.platform()`](https://nodejs.org/api/os.h
 
 Check out [`getos`](https://github.com/wblankenship/getos) if you need the Linux distribution name.
 
-
 ## Contributing
 
 Production systems depend on this package for logging / tracking. Please be careful when introducing new output, and adhere to existing output format (whitespace, capitalization, etc.).
 
-
 ## Related
 
 - [os-name-cli](https://github.com/sindresorhus/os-name-cli) - CLI for this module
-
 
 ---
 
