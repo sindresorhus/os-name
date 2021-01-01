@@ -1,4 +1,4 @@
-# os-name [![Build Status](https://travis-ci.com/sindresorhus/os-name.svg?branch=master)](https://travis-ci.com/github/sindresorhus/os-name)
+# os-name
 
 > Get the name of the current operating system\
 > Example: `macOS Sierra`
