@@ -1,5 +1,3 @@
-/// <reference types="node"/>
-
 /**
 Get the name of the current operating system.
 
