@@ -14,8 +14,8 @@ $ npm install os-name
 ## Usage
 
 ```js
-const os = require('os');
-const osName = require('os-name');
+import os from 'node:os';
+import osName from 'os-name';
 
 // On a macOS Sierra system
 
