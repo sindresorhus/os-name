@@ -7,8 +7,8 @@ Useful for analytics and debugging.
 
 ## Install
 
-```
-$ npm install os-name
+```sh
+npm install os-name
 ```
 
 ## Usage

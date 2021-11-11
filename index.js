@@ -20,6 +20,10 @@ export default function osName(platform, release) {
 
 		try {
 			id = release ? macosRelease(release).name : '';
+
+			if (id === 'Unknown') {
+				return prefix;
+			}
 		} catch {}
 
 		return prefix + (id ? ' ' + id : '');
