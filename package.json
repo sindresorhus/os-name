@@ -1,6 +1,6 @@
 {
 	"name": "os-name",
-	"version": "5.0.1",
+	"version": "5.1.0",
 	"description": "Get the name of the current operating system. Example: macOS Sierra",
 	"license": "MIT",
 	"repository": "sindresorhus/os-name",
