@@ -45,22 +45,6 @@ You can optionally supply a custom [`os.platform()`](https://nodejs.org/api/os.h
 
 Check out [`getos`](https://github.com/wblankenship/getos) if you need the Linux distribution name.
 
-## Contributing
-
-Production systems depend on this package for logging / tracking. Please be careful when introducing new output, and adhere to existing output format (whitespace, capitalization, etc.).
-
 ## Related
 
 - [os-name-cli](https://github.com/sindresorhus/os-name-cli) - CLI for this module
-
----
-
-<div align="center">
-	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-os-name?utm_source=npm-os-name&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
-	</b>
-	<br>
-	<sub>
-		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
-	</sub>
-</div>

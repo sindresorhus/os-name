@@ -7,7 +7,7 @@ export default function osName(platform, release) {
 		throw new Error('You can\'t specify a `release` without specifying `platform`');
 	}
 
-	platform = platform || os.platform();
+	platform = platform ?? os.platform();
 
 	let id;
 
