@@ -41,7 +41,7 @@
 	],
 	"dependencies": {
 		"macos-release": "^3.2.0",
-		"windows-release": "^6.0.0"
+		"windows-release": "^6.0.1"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.0",
