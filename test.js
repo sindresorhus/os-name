@@ -14,6 +14,7 @@ test('main', t => {
 	t.is(osName('win32', '4.90'), 'Windows ME');
 	t.is(osName('win32', '6.2'), 'Windows 8');
 	t.is(osName('win32', '10.0'), 'Windows 10');
+	t.is(osName('win32', '10.0.26100'), 'Windows 11');
 
 	os.platform = () => 'darwin';
 	t.is(osName('win32'), 'Windows');
