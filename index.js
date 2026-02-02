@@ -1,6 +1,20 @@
+import fs from 'node:fs';
 import os from 'node:os';
 import macosRelease from 'macos-release';
 import windowsRelease from 'windows-release';
+
+function getLinuxPrettyName() {
+	try {
+		const osRelease = fs.readFileSync('/etc/os-release', 'utf8');
+		const match = osRelease.match(/^PRETTY_NAME=(?:"(.+?)"|'(.+?)'|(.+))$/m);
+		const prettyName = match?.[1] ?? match?.[2] ?? match?.[3];
+		if (prettyName) {
+			return prettyName;
+		}
+	} catch {}
+
+	return '';
+}
 
 export default function osName(platform, release) {
 	if (!platform && release) {
@@ -31,6 +45,11 @@ export default function osName(platform, release) {
 
 	if (platform === 'linux') {
 		if (!release && os.platform() === 'linux') {
+			const prettyName = getLinuxPrettyName();
+			if (prettyName) {
+				return prettyName;
+			}
+
 			release = os.release();
 		}
 

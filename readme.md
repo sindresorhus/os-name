@@ -14,7 +14,6 @@ npm install os-name
 ## Usage
 
 ```js
-import os from 'node:os';
 import osName from 'os-name';
 
 // On a macOS Sierra system
@@ -22,8 +21,10 @@ import osName from 'os-name';
 osName();
 //=> 'macOS Sierra'
 
-osName(os.platform(), os.release());
-//=> 'macOS Sierra'
+// On an Ubuntu system
+
+osName();
+//=> 'Ubuntu 20.04.1 LTS'
 
 osName('darwin', '14.0.0');
 //=> 'OS X Yosemite'
@@ -41,9 +42,9 @@ osName('win32', '6.3.9600');
 
 By default, the name of the current operating system is returned.
 
-You can optionally supply a custom [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) and [`os.release()`](https://nodejs.org/api/os.html#os_os_release).
+On Linux, it reads the pretty name from `/etc/os-release` when available (e.g., `'Ubuntu 20.04.1 LTS'`, `'Debian GNU/Linux 12 (bookworm)'`). When a custom release is provided, it falls back to `'Linux <version>'`.
 
-Check out [`getos`](https://github.com/wblankenship/getos) if you need the Linux distribution name.
+You can optionally supply a custom [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) and [`os.release()`](https://nodejs.org/api/os.html#os_os_release).
 
 ## Related
 

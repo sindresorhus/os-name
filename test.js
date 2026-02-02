@@ -28,3 +28,8 @@ test('main', t => {
 	t.is(osName('darwin'), 'macOS');
 	t.is(osName('linux'), 'Linux');
 });
+
+test('linux with custom release still uses kernel version', t => {
+	t.is(osName('linux', '5.15.0-46-generic'), 'Linux 5.15');
+	t.is(osName('linux', '6.1.0'), 'Linux 6.1');
+});
