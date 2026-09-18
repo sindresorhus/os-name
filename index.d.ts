@@ -32,5 +32,4 @@ osName('win32', '6.3.9600');
 //=> 'Windows 8.1'
 ```
 */
-export default function osName(): string;
-export default function osName(platform: NodeJS.Platform, release: string): string;
+export default function osName(platform?: NodeJS.Platform, release?: string): string;
